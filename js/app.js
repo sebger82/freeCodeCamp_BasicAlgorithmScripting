@@ -91,16 +91,16 @@ largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 85
 //Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 function confirmEnding(str, target) {
-     var temp = str.split(' ');
-  console.log(temp);
-
-    if (temp.pop() == target){
-      return true;
-    
+     var temp = str.split(' ').join();
+    if (str.search(target) > 0){
+      if( str.length - target.length == str.search(target)){
+          return true;
+      } else {
+        return false;
+      }
   } else {
     return false;
   }
- 
 }
 
 confirmEnding("Bastian", "n");
