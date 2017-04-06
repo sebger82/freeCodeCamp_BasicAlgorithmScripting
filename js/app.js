@@ -91,7 +91,6 @@ largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 85
 //Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 function confirmEnding(str, target) {
-     var temp = str.split(' ').join();
     if (str.search(target) > 0){
       if( str.length - target.length == str.search(target)){
           return true;
@@ -104,3 +103,14 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+//Repeat a given string (first argument) num times (second argument). Return an empty string if num is not a positive number.
+
+function repeatStringNumTimes(str, num) {
+  var concatArr = [];
+  for ( var i = 1; i <= num; i++) {
+    concatArr = concatArr.concat(str);
+  }
+  return concatArr.join('');
+}
+repeatStringNumTimes("abc", 3);
