@@ -150,3 +150,13 @@ var baza = [];
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
+
+
+// Return the remaining elements of an array after chopping off n elements from the head.
+
+function slasher(arr, howMany) {
+  arr.splice(0, howMany);
+  return arr;
+}
+
+slasher([1, 2, 3], 2);
