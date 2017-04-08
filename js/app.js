@@ -135,3 +135,18 @@ truncateString("A-tisket a-tasket A green and yellow basket", 11);
 truncateString("Absolutely Longer", 2);
 truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2);
 truncateString("A-", 1);
+
+//Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+
+function chunkArrayInGroups(arr, size) {
+var baza = [];
+  for (i=1; i <= (Math.ceil(arr.length / size)); i++) {
+    var nowa = arr.slice((size*i-size), (size*i));
+    baza.push(nowa);
+  }
+  return baza;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
