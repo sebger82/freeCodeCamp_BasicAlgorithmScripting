@@ -177,3 +177,35 @@ function mutation(arr) {
 mutation(["hello", "hey"]);
 mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
 mutation(["Mary", "Aarmy"]);
+
+// Remove all falsy values from an array.
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+// You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments. 
+
+function destroyer(arr) {
+  var argum = [].slice.call(arguments);
+  argum.splice(0, 1);
+  return arr.filter(function(element) {
+    return argum.indexOf(element) < 0;
+  });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+// Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  var sortedArr = arr.sort(function(a, b) {
+  return a - b;
+});
+  return sortedArr.indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
