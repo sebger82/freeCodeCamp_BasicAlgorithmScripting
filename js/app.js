@@ -209,3 +209,11 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+// Caesars Cipher
+
+function rot13(str) {
+  return str.replace(/[A-Z]/g, (L) => String.fromCharCode(65 + (L.charCodeAt(0) - 65 + 13) % 26));
+}
+
+rot13("SERR PBQR PNZC");
